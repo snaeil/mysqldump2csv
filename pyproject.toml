@@ -1,0 +1,35 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "mysqldump2csv"
+version = "0.1.0"
+description = "Converts a mysql dump to csv files"
+authors = [
+  "Sandro Eiler",
+]
+readme = "README.md"
+repository = "https://github.com/snaeil/mysqldump2csv.git"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^4.1.0"
+black = "^23.3.0"
+mypy = "^1.3.0"
+pdoc = "^13.1.1"
+pylint = "^2.17.4"
+
+[tool.poetry.scripts]
+rehacat_survey_flow_runner = { callable = "mysqldump2csv:core.cli" }
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/snaeil/mysqldump2csv/issues"
+
